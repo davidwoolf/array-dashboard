@@ -1,11 +1,9 @@
+import {ButtonInterface} from '~/config/interface/Button'
+
 import {Button} from '~/components/Button/Button'
 
-export const FieldButton = ({
-    className,
-    label,
-}: {className?: string, label: string}) => (
+export const FieldButton = (props: ButtonInterface) => (
     <Button
-    className={className}
     type="submit"
-    label={label} />
+    {...props} />
 )

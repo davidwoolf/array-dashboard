@@ -1,11 +1,6 @@
-interface Button extends React.ComponentPropsWithoutRef<"button"> {
-    className? : string,
-    icon?: any,
-    label: string;
-    size?: 'normal' | 'small',
-    variant?: 'normal' | 'simple' | 'highlight',
-}
-export const Button = (props: Button) => {
+import {ButtonInterface} from '~/config/interface/Button'
+
+export const Button = (props: ButtonInterface) => {
     const {
         className = '',
         icon = undefined,

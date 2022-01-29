@@ -1,11 +1,11 @@
-interface Input {
+interface Input extends React.ComponentPropsWithoutRef<"input"> {
     label: string;
-    type?: string;
     placeholder?: string | undefined;
     description?: string | undefined;
 }
 
 export const Input = ({
+    name,
     label,
     type = 'text',
     placeholder = undefined,
@@ -43,7 +43,8 @@ export const Input = ({
             focus:outline-none
         "
         placeholder={placeholder}
-        type={type} />
+        type={type}
+        name={name} />
 
         {description && 
             <span
